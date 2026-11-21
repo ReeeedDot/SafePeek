@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "SafePeek - Malicious URL Detector",
+  "version": "1.0",
+  "description": "Zero-Login ML-based Phishing & Malicious URL Detection System",
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

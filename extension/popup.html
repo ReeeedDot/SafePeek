@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 320px;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      padding: 15px;
+      margin: 0;
+      background-color: #f8f9fa;
+      color: #202124;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #dadce0;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .header h3 {
+      margin: 0;
+      color: #1a73e8;
+      font-size: 16px;
+    }
+    .badge {
+      font-size: 10px;
+      background: #e8f0fe;
+      color: #1a73e8;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 13px;
+    }
+    button {
+      width: 100%;
+      padding: 9px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1557b0;
+    }
+    #resultBox {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 6px;
+      display: none;
+      border: 1px solid transparent;
+    }
+    #statusTitle {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    #riskScore {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    ul {
+      margin: 4px 0 0;
+      padding-left: 18px;
+      font-size: 12px;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>SafePeek Scanner</h3>
+    <span class="badge">Zero-Login</span>
+  </div>
+  <input type="text" id="urlInput" placeholder="Paste or enter URL to analyze..." />
+  <button id="scanBtn">Analyze URL</button>
+
+  <div id="resultBox">
+    <div id="statusTitle"></div>
+    <div id="riskScore"></div>
+    <ul id="reasonList"></ul>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
